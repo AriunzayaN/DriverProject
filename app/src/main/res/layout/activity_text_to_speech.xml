@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ana.texttospeech.TextToSpeechTest">
+
+    <Button
+        android:id="@+id/btnSpeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speak"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="77dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/txtEnter"
+        android:layout_alignLeft="@+id/txtEnter"
+        android:layout_alignStart="@+id/txtEnter" />
+
+    <EditText
+        android:id="@+id/txtEnter"
+        android:layout_width="358dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Text"
+        tools:layout_editor_absoluteY="5dp"
+        tools:layout_editor_absoluteX="10dp"
+        android:layout_marginTop="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/txtLatLon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtEnter"
+        android:layout_alignLeft="@+id/txtEnter"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtEnter"
+        android:layout_alignStart="@+id/txtEnter"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lat Long" />
+
+    <EditText
+        android:id="@+id/txtMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSpeak"
+        android:layout_marginTop="109dp"
+        android:layout_toEndOf="@+id/btnSpeak"
+        android:layout_toRightOf="@+id/btnSpeak"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+</RelativeLayout>
