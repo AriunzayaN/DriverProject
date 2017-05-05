@@ -17,16 +17,23 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".TextToSpeechTest">
+        <activity android:name=".TextToSpeechTest"
+            android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.SPEECH" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"/>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

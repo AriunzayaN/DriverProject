@@ -30,6 +30,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -51,20 +53,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Marker busStopMarker;
     Double longitude;
     Double latitude;
-    FetchTable fetchJson = new FetchTable();
-    JSONObject fetchedJson;
+
+    FetchTable fetchTable;
+    JSONArray jsa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map1);
         button = (Button) findViewById(R.id.button1);
-//        text1 = (TextView) findViewById(R.id.text1);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
 
 
         listener = new LocationListener() {
@@ -86,7 +89,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             public void run() {
 
-                                fetchJson.doInBackground();
+                                jsa = fetchTable.doInBackground();
+
+                                if(jsa == null){
+
+                                }else{
+
+                                }
 
                             }
 
@@ -122,10 +131,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         configure_button();
 
 
+
     }
 
-    public void busStopMarking(double latitude,double longitude){
+    public void busStopMarking(JSONArray jsa){
+        for (int i = 0; i < jsa.length(); i ++){
 
+            try {
+                JSONObject jso = jsa.getJSONObject(i);
+                Double lat = Double.valueOf(jso.getString("latitude"));
+                Double lon = Double.valueOf(jso.getString("longitude"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

@@ -28,7 +28,7 @@ public class FetchTable extends AsyncTask<Void, Void, JSONArray>{
 
         try
         {
-            URL url = new URL("https://curewitz.com/request/");
+            URL url = new URL("https://frogger.cs.endicott.edu/shuttle-tracker/request");
             urlConn = url.openConnection();
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
 
@@ -38,7 +38,6 @@ public class FetchTable extends AsyncTask<Void, Void, JSONArray>{
             while ((line = br.readLine()) != null)
             {
                 stringBuffer.append(line);
-                Log.d("JSON ", line);
             }
 
             JSONArray jsonArray = new JSONArray(String.valueOf(stringBuffer));

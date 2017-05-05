@@ -4,55 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#018263"
     tools:context="com.example.ana.texttospeech.TextToSpeechTest">
 
     <Button
         android:id="@+id/btnSpeak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speak"
+        android:layout_width="250sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="42dp"
+        android:text="Read"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="77dp"
-        android:layout_marginTop="39dp"
-        android:layout_below="@+id/txtEnter"
-        android:layout_alignLeft="@+id/txtEnter"
-        android:layout_alignStart="@+id/txtEnter" />
-
-    <EditText
-        android:id="@+id/txtEnter"
-        android:layout_width="358dp"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Enter Text"
-        tools:layout_editor_absoluteY="5dp"
-        tools:layout_editor_absoluteX="10dp"
-        android:layout_marginTop="108dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:id="@+id/txtLatLon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtEnter"
-        android:layout_alignLeft="@+id/txtEnter"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/txtEnter"
-        android:layout_alignStart="@+id/txtEnter"
-        android:layout_marginTop="31dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Lat Long" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp" />
 
     <EditText
         android:id="@+id/txtMultiple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSpeak"
-        android:layout_marginTop="109dp"
-        android:layout_toEndOf="@+id/btnSpeak"
-        android:layout_toRightOf="@+id/btnSpeak"
         android:ems="10"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:focusable="false"
+        android:layout_above="@+id/btnDel6"
+        android:layout_alignLeft="@+id/btnSpeak"
+        android:layout_alignStart="@+id/btnSpeak" />
+
+    <Button
+        android:id="@+id/btnDel8"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel7"
+        android:layout_alignStart="@+id/btnDel7"
+        android:layout_below="@+id/btnDel7"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel7"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel6"
+        android:layout_alignStart="@+id/btnDel6"
+        android:layout_below="@+id/btnDel6"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel6"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel5"
+        android:layout_alignStart="@+id/btnDel5"
+        android:layout_below="@+id/btnDel5"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel5"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel4"
+        android:layout_alignStart="@+id/btnDel4"
+        android:layout_below="@+id/btnDel4"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel4"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel1"
+        android:layout_alignStart="@+id/btnDel1"
+        android:layout_below="@+id/btnDel3"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel3"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/btnDel2"
+        android:layout_alignStart="@+id/btnDel2"
+        android:layout_below="@+id/btnDel2"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel2"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/btnDel1"
+        android:layout_toEndOf="@+id/to_array"
+        android:layout_toRightOf="@+id/to_array"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnDel1"
+        android:layout_width="160sp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtFromNonEdit"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/button"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/from_array"
+        android:layout_width="250sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/txtFromNonEdit"
+        android:layout_toLeftOf="@+id/to_array"
+        android:layout_toStartOf="@+id/to_array"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/to_array"
+        android:layout_width="250sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnDel8"
+        android:layout_toStartOf="@+id/btnDel8"
+        android:orientation="vertical"
+        android:layout_below="@+id/txtToNonEdit"></LinearLayout>
+
+    <EditText
+        android:id="@+id/txtFromNonEdit"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:text="From:"
+        android:textColor="#eaefed"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/from_array"
+        android:layout_alignStart="@+id/from_array" />
+
+    <EditText
+        android:id="@+id/txtToNonEdit"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:text="To:"
+        android:textColor="#eaefed"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/from_array"
+        android:layout_toEndOf="@+id/from_array" />
+
+
 </RelativeLayout>
